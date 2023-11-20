@@ -1,0 +1,44 @@
+function countdown(targetDate) {
+    const target = new Date(targetDate).getTime();
+
+    const interval = setInterval(function() {
+        const now = new Date().getTime();
+        const difference = target - now;
+
+        if (difference < 0) {
+            clearInterval(interval);
+            document.getElementById("countdown").innerHTML = "Evento comenzado!";
+            return;
+        }
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = days < 10 ? '0' + days : days;
+        document.getElementById("hours").textContent = hours < 10 ? '0' + hours : hours;
+        document.getElementById("minutes").textContent = minutes < 10 ? '0' + minutes : minutes;
+        document.getElementById("seconds").textContent = seconds < 10 ? '0' + seconds : seconds;
+    }, 1000);
+}
+
+countdown('July 6, 2024 23:59:59'); // Reemplaza esta fecha con tu fecha objetivo
+
+
+function mostrarCampos() {
+    var seleccion = document.getElementById('asistencia').value;
+    var camposSi = document.getElementById('camposSi');
+    var camposNo = document.getElementById('camposNo');
+
+    if (seleccion === "si") {
+        camposSi.style.display = 'block';
+        camposNo.style.display = 'none';
+    } else if (seleccion === "no") {
+        camposSi.style.display = 'none';
+        camposNo.style.display = 'block';
+    }else{
+        camposSi.style.display = 'none';
+        camposNo.style.display = 'none';
+    }
+}

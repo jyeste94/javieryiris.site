@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>John and Jane's Wedding</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./ejemplo.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Quicksand&display=swap" rel="stylesheet">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="heading">
+        Javier & Iris
+        <span class="heading-subtext"> La boda del año </span>
+      </h1>
+    </header>
+<!--    <a data-scroll class="fixed-button" href="#rsvp" id="rsvpButton">RSVP</a> -->
+    <div class="seccion-full">
+    <section class="section">
+<!--      <h2 class="sub-heading">Overview</h2>-->
+      <p>Os invitamos al dia mas especial de nuestras vidas. Queremos que estéis a nuestro lado. Os esperamos a las 17:00 en la Basilica Nuestra Señora del Socorro.
+      </p>
+    </section>
+    <section class="section">
+<!--      <h2 class="sub-heading">Los Detalles</h2>-->
+      <div class="details">
+<!--        <i class="fas fa-calendar-check"></i>-->
+          <h3 class="details-heading">Cuando</h3>
+        <img src="img/9db6052d-50bb-4561-8456-68681c113cec.svg" width="15%">
+        <p>6 Julio, 2024</p>
+        <div id="countdown">
+          <div class="days section values zero">
+            <span id="days">00</span>
+            <span class="copy-countdown">Día</span>
+          </div>
+
+          <div class="sep section zero">
+            <p>:</p>
+          </div>
+
+          <div class="hours section values zero">
+            <span id="hours">00</span>
+            <span class="copy-countdown">Hrs</span>
+          </div>
+
+          <div class="sep section zero">
+            <p>:</p>
+          </div>
+
+          <div class="minutes section values zero">
+            <span id="minutes">00</span>
+            <span class="copy-countdown">Min</span>
+          </div>
+
+          <div class="sep section zero">
+            <p>:</p>
+          </div>
+          <div class="seconds section values zero">
+            <span id="seconds">00</span>
+            <span class="copy-countdown">Seg</span>
+          </div>
+
+        </div>
+
+        <a style="margin-top: 15%;font-size: 90%;" title="Add to Calendar" rel="noopener" href="#" target="_blank" rel="nofollow" class="btn btn-lg btn-primary">GUARDAR FECHA</a>
+      </div>
+      <div class="details">
+<!--        <i class="fas fa-map-marked-alt"></i>-->
+          <h3 class="details-heading">Donde</h3>
+          <img src="img/location.png" width="15%">
+<!--        <p><a rel="noopener" href="#">Basilica Nuestra Señora del Socorro </a>, Aspe, Alicante</p>-->
+          <p>Basilica Nuestra Señora del Socorro, Aspe, Alicante</p>
+        <img class="resort-image" src="./img/280px-Basilica_de_Aspe.jpeg" alt="Resort" />
+      </div>
+      <div class="details">
+<!--        <i class="fas fa-suitcase"></i>-->
+          <img src="img/Wedding_ring.jpg" width="15%">
+        <h3 class="details-heading">Celebración</h3>
+        <p>El convite se realizará a las 20:00 en la Riera Banquetes.</p>
+<!--        <p>Se ruega confirmacion</p>-->
+<!--        <p>Javier: 600893607</p>-->
+<!--        <p>Iris: 664585361</p>-->
+          <img style="margin-bottom: 5%" src="img/riera-banquetes-1-scaled.jpg" width="100%">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3130.021019171007!2d-0.768955123537724!3d38.32534408025412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63c7ee31eac3bb%3A0xb3a196457a813687!2sLa%20Riera%20Banquetes!5e0!3m2!1ses!2ses!4v1699984734787!5m2!1ses!2ses" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="details">
+          <img src="img/gift_3835818.png" width="15%">
+<!--        <i class="fas fa-asterisk"></i>-->
+<!--        <h3 class="details-heading">Other Notes</h3>-->
+        <p>Vuestra presencia es nuestro mayor regalo, pero si queréis hacer una aportación este es nuestro número de cuenta</p>
+        <p id="Numero-cuenta">ES30 0081 1486 7100 0163 7072</p>
+      </div>
+      <div class="details">
+<!--        <i class="fas fa-reply"></i>-->
+<!--        <h3 class="details-heading" id="rsvp">RSVP</h3>-->
+        <p>Se ruega confirmación</p>
+          <form id="formularioInvitacion">
+<!--              <label for="asistencia">¿Asistirás a la invitación?</label>-->
+              <select class="form-control" id="asistencia" name="asistencia" onchange="mostrarCampos()">
+                  <option value="#">¿Asistirás?</option>
+                  <option value="si">Acpeto la invitación</option>
+                  <option value="no">Declino asistencia</option>
+              </select>
+
+              <div id="camposSi" style="display:none;">
+                  <!-- Campos que aparecen si elige "Sí" -->
+                  <label for="nombreSi">Nombre:</label>
+                  <input  class="form-control" type="text" id="nombreSi" name="nombreSi"><br>
+
+                  <label for="telefonoSi">Teléfono:</label>
+                  <input class="form-control" type="text" id="telefonoSi" name="telefonoSi"><br>
+
+                  <label for="emailSi">Email:</label>
+                  <input class="form-control" type="email" id="emailSi" name="emailSi"><br>
+
+                  <label for="acompanante">¿Vienes con acompañante?</label>
+                  <input class="form-control" type="checkbox" id="acompanante" name="acompanante"><br>
+              </div>
+
+              <div id="camposNo" style="display:none;">
+                  <!-- Campos que aparecen si elige "No" -->
+                  <label for="nombreNo">Nombre:</label>
+                  <input class="form-control" type="text" id="nombreNo" name="nombreNo"><br>
+
+                  <label for="telefonoNo">Teléfono:</label>
+                  <input class="form-control" type="text" id="telefonoNo" name="telefonoNo"><br>
+
+                  <label for="emailNo">Email:</label>
+                  <input class="form-control" type="email" id="emailNo" name="emailNo"><br>
+
+                  <label for="comentarios">Algún comentario:</label>
+                  <textarea class="form-control" id="comentarios" name="comentarios"></textarea>
+              </div>
+
+              <input type="submit" value="Enviar">
+          </form>
+
+        <!-- Include Embedded link of Google Form here in place of # -->
+        <!-- <iframe title="RSVP" src="" style="width:100%;" height="960" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+      </div>
+    </section>
+    </div>
+    <script src="./js/smooth-scroll.polyfills.min.js"></script>
+    <script src="./js/index.js"></script>
+<!--    <script defer>-->
+<!--      var scroll = new SmoothScroll('a[href*="#"]');-->
+<!--      var rsvpButton = document.getElementById('rsvpButton')-->
+<!--      rsvpButton.addEventListener('click',hideButton,false);-->
+
+<!--      function hideButton() {-->
+<!--        rsvpButton.style.display = 'none';-->
+<!--      }-->
+<!--    </script>-->
+  </body>
+</html>
