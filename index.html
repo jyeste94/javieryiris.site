@@ -8,11 +8,17 @@
     <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="./ejemplo.css">
     <link href="https://fonts.googleapis.com/css?family=Caveat|Quicksand&display=swap" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+  <div id="qr" style="display: none;">
+    <div id="qrcode"  class="rounded mx-auto d-block"  style="display: none;"></div>
+      Para ver la invitación, por favor lee este código QR
+  </div>
+    <div id="contenidoPrincipal">
     <header class="header">
       <h1 class="heading">
         Javier & Iris
@@ -157,5 +163,6 @@
 <!--        rsvpButton.style.display = 'none';-->
 <!--      }-->
 <!--    </script>-->
+    </div>
   </body>
 </html>

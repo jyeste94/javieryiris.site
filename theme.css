@@ -13,13 +13,20 @@ html, body{
     box-sizing: initial;
 }
 
-/*.seccion-full{*/
-/*    background-image: url("./img/black-1072366_1280.jpg");*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: 50% 60%;*/
-/*    background-attachment: scroll;*/
-/*    background-size: cover;*/
-/*}*/
+.seccion-full{
+    background-image:
+            linear-gradient(
+                    rgba(255, 255, 255, 0.8), /* Ajusta la opacidad aquí */
+                    rgba(255, 255, 255, 0.8)  /* Y aquí si es necesario */
+            ),
+            url("img/pexels-henry-&-co-1939485.jpg"); /* Ruta de tu imagen de fondo */
+    /*background-image: url("img/pexels-henry-&-co-1939485.jpg");*/
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    background-attachment: scroll;
+    background-size: cover;
+
+}
 
 .header{
     background-image:linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)),  url(./img/iris2.jpg);
@@ -138,10 +145,10 @@ html, body{
 #Numero-cuenta{
     opacity: 1
 }
-/*.details p a{*/
-/*    opacity: .5;*/
-/*}*/
-
+#qrcode{
+    margin-top: 20%;
+    padding-left: 43%;
+}
 
 @media only screen and (max-width: 600px) {
     .heading {

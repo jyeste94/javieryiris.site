@@ -42,3 +42,30 @@ function mostrarCampos() {
         camposNo.style.display = 'none';
     }
 }
+
+
+function esDispositivoMovil() {
+    return window.innerWidth <= 800;
+}
+
+window.onload = function() {
+    var contenidoPrincipal = document.getElementById("contenidoPrincipal");
+    var qrcodeContainer = document.getElementById("qrcode");
+    var qr = document.getElementById("qr");
+
+    if (!esDispositivoMovil()) {
+        // Ocultar el contenido principal
+        contenidoPrincipal.style.display = "none";
+        console.log('sdfsdfsdf');
+        // Mostrar y generar el código QR
+        var qrcode = new QRCode(qrcodeContainer, {
+            text: window.location.href,
+            width: 256,
+            height: 256,
+        });
+
+        //qrcodeContainer.innerHTML = "Para ver la invitación, por favor lee este código QR";
+        qrcodeContainer.style.display = "block";
+        qr.style.display = "block";
+    }
+};
