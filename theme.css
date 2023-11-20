@@ -150,6 +150,12 @@ html, body{
     padding-left: 43%;
 }
 
+.btn-primary{
+    margin-top: 15%;
+    font-size: 90%;
+    background-color: #7cd2d3;
+    border-color: #7cd2d3;
+}
 @media only screen and (max-width: 600px) {
     .heading {
         font-size: 4em;
