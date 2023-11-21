@@ -156,6 +156,24 @@ html, body{
     background-color: #7cd2d3;
     border-color: #7cd2d3;
 }
+#copyright{
+    font-size: 10px;
+}
+.form-control{
+    width: 90%;
+}
+#checkbox-acompanante{
+    margin-top: 5%;
+}
+#checkbox-acompanante  label{
+    float: left;
+}
+#checkbox-acompanante input{
+    width: 5%;
+    float: left;
+    margin-left: 30%;
+}
+
 @media only screen and (max-width: 600px) {
     .heading {
         font-size: 4em;

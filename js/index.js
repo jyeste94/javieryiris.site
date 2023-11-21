@@ -43,6 +43,11 @@ function mostrarCampos() {
     }
 }
 
+function mostrarCampos2() {
+    var elem = document.getElementById('form-acompanante');
+    elem.style.display = elem.style.display === 'none' ? 'block' : 'none';
+}
+
 
 function esDispositivoMovil() {
     return window.innerWidth <= 800;

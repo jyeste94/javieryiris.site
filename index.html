@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8">
-    <title>John and Jane's Wedding</title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-      <link rel="stylesheet" type="text/css" href="theme.css">
-      <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css">
-      <link rel="stylesheet" type="text/css" href="./ejemplo.css">
-      <link href="https://fonts.googleapis.com/css?family=Caveat|Quicksand&display=swap" rel="stylesheet">
-      <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
-
-
+    <title>Boda Javier & Iris</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./ejemplo.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Quicksand&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
@@ -111,41 +109,50 @@
 <!--              <label for="asistencia">¿Asistirás a la invitación?</label>-->
               <select class="form-control" id="asistencia" name="asistencia" onchange="mostrarCampos()">
                   <option value="#">¿Asistirás?</option>
-                  <option value="si">Acpeto la invitación</option>
+                  <option value="si">Acepto la invitación</option>
                   <option value="no">Declino asistencia</option>
               </select>
 
               <div id="camposSi" style="display:none;">
                   <!-- Campos que aparecen si elige "Sí" -->
-                  <label for="nombreSi">Nombre:</label>
-                  <input  class="form-control" type="text" id="nombreSi" name="nombreSi"><br>
+                  <label for="nombreSi"></label>
+                  <input  class="form-control" type="text" id="nombreSi" name="nombreSi" placeholder="Nombre">
 
-                  <label for="telefonoSi">Teléfono:</label>
-                  <input class="form-control" type="text" id="telefonoSi" name="telefonoSi"><br>
+                  <label for="telefonoSi"></label>
+                  <input class="form-control" type="text" id="telefonoSi" name="telefonoSi" placeholder="Teléfono">
 
-                  <label for="emailSi">Email:</label>
-                  <input class="form-control" type="email" id="emailSi" name="emailSi"><br>
+                  <label for="emailSi"></label>
+                  <input class="form-control" type="email" id="emailSi" name="emailSi" placeholder="Email">
 
-                  <label for="acompanante">¿Vienes con acompañante?</label>
-                  <input class="form-control" type="checkbox" id="acompanante" name="acompanante"><br>
+                  <div id="checkbox-acompanante">
+                      <label for="acompanante">¿Vienes con acompañante?</label>
+                      <input class="form-control" type="checkbox" id="acompanante" name="acompanante" onchange="mostrarCampos2()">
+                  </div>
+                  <div id="form-acompanante" style="display: none;">
+                      <label></label>
+                      <input class="form-control" type="text" id="nombre-acompanante" name="nombre-acompanante" placeholder="Nombre Acompañante">
+                  </div><br>
+                  <labe for="alergias"></labe>
+                  <textarea class="form-control" id="alergias" name="alergias" placeholder="¿Tienes alguna alergia y/o sugerencia?"></textarea>
               </div>
 
               <div id="camposNo" style="display:none;">
                   <!-- Campos que aparecen si elige "No" -->
-                  <label for="nombreNo">Nombre:</label>
-                  <input class="form-control" type="text" id="nombreNo" name="nombreNo"><br>
+                  <label for="nombreNo"></label>
+                  <input class="form-control" type="text" id="nombreNo" name="nombreNo" placeholder="Nombre">
 
-                  <label for="telefonoNo">Teléfono:</label>
-                  <input class="form-control" type="text" id="telefonoNo" name="telefonoNo"><br>
+                  <label for="telefonoNo"></label>
+                  <input class="form-control" type="text" id="telefonoNo" name="telefonoNo" placeholder="Teléfono">
 
-                  <label for="emailNo">Email:</label>
-                  <input class="form-control" type="email" id="emailNo" name="emailNo"><br>
+                  <label for="emailNo"></label>
+                  <input class="form-control" type="email" id="emailNo" name="emailNo" placeholder="Email">
 
-                  <label for="comentarios">Algún comentario:</label>
-                  <textarea class="form-control" id="comentarios" name="comentarios"></textarea>
+
+                  <label for="comentarios"></label>
+                  <textarea class="form-control" id="comentarios" name="comentarios" placeholder="Algún comentario"></textarea>
               </div>
 
-              <input class="btn-primary" type="submit" value="Enviar">
+              <input class="btn btn-lg btn-primary" type="submit" value="Enviar">
           </form>
 
         <!-- Include Embedded link of Google Form here in place of # -->
