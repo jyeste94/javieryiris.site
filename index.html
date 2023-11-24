@@ -105,6 +105,8 @@
 <!--        <i class="fas fa-reply"></i>-->
 <!--        <h3 class="details-heading" id="rsvp">RSVP</h3>-->
         <p>Se ruega confirmación</p>
+          <div class="alert alert-success" role="alert" id="mensajeResultado"></div>
+
           <form id="formularioInvitacion">
 <!--              <label for="asistencia">¿Asistirás a la invitación?</label>-->
               <select class="form-control" id="asistencia" name="asistencia" onchange="mostrarCampos()">
@@ -164,7 +166,8 @@
     </section>
     </div>
     <script src="./js/smooth-scroll.polyfills.min.js"></script>
-    <script src="./js/index.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./js/index.js"></script>
 <!--    <script defer>-->
 <!--      var scroll = new SmoothScroll('a[href*="#"]');-->
 <!--      var rsvpButton = document.getElementById('rsvpButton')-->

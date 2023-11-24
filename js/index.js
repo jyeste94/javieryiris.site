@@ -74,3 +74,21 @@ window.onload = function() {
         qr.style.display = "block";
     }
 };
+
+
+$(document).ready(function() {
+    $('#formularioInvitacion').on('submit', function(e) {
+        e.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+        $.ajax({
+            type: 'POST',
+            url: 'guardar.php', // La URL de tu script PHP
+            data: $(this).serialize(),
+            success: function(response) {
+                $('#mensajeResultado').html(response);
+            },
+            error: function() {
+                $('#mensajeResultado').html('Ocurrió un error al enviar el formulario.');
+            }
+        });
+    });
+});
