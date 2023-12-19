@@ -85,9 +85,11 @@ $(document).ready(function() {
             data: $(this).serialize(),
             success: function(response) {
                 $('#mensajeResultado').html(response);
+                $('#mensajeResultado').show();
             },
             error: function() {
                 $('#mensajeResultado').html('Ocurrió un error al enviar el formulario.');
+                $('#mensajeResultado').show();
             }
         });
     });
