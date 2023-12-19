@@ -1,19 +1,6 @@
 <?php
 
-
-// Configuración de la base de datos
-$host = 'localhost'; // o tu dirección IP del servidor
-$usuario = 'root';
-$contrasena = '';
-$base_de_datos = 'irisyjavi';
-
-// Conectar a la base de datos
-$conn = new mysqli($host, $usuario, $contrasena, $base_de_datos);
-
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+include 'db_connect.php';
 
 // Obtener los datos del formulario
 $asistencia = $_POST['asistencia'];
@@ -36,7 +23,7 @@ if ($stmt->execute()) {
     echo "Registro guardado exitosamente";
 } else {
     echo "Error: " . $stmt->error;
-}
+} 
 
 // Cerrar conexión
 $stmt->close();
