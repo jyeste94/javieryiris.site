@@ -13,7 +13,7 @@ header('Content-Disposition: attachment; filename="'.$filename.'"');
 $fp = fopen('php://output', 'w');
 
 // Opcional: Encabezados de las columnas
-$headers = []; // Aquí debes agregar los nombres de las columnas
+$headers = ['asistencia','nombre','telefono','email','acompanante','alergias','comentarios']; // Aquí debes agregar los nombres de las columnas
 fputcsv($fp, $headers);
 
 // Recorrer los resultados y escribir en el archivo CSV

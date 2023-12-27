@@ -86,6 +86,7 @@ $(document).ready(function() {
             success: function(response) {
                 $('#mensajeResultado').html(response);
                 $('#mensajeResultado').show();
+                $('#formularioInvitacion').hide();
             },
             error: function() {
                 $('#mensajeResultado').html('Ocurrió un error al enviar el formulario.');
