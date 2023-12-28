@@ -21,6 +21,17 @@ $stmt->bind_param("sssssss", $asistencia, $nombre, $telefono, $email, $acompanan
 // Ejecutar la consulta
 if ($stmt->execute()) {
     echo "Registro guardado exitosamente";
+    // Enviar correo electrónico
+    $serverDomain = $_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'];
+    $to = $email;
+    $subject = 'Nuevo registro de asistencia';
+    $message = "Asistencia: $asistencia\nNombre: $nombre\nTeléfono: $telefono\nEmail: $email\nAcompañante: $acompanante\nAlergias: $alergias\nComentarios: $comentarios";
+    $headers = 'From: webmaster@' . "\r\n" .
+               'Reply-To: webmaster@$serverDomain' . "\r\n" .
+               'X-Mailer: PHP/' . phpversion();
+
+    mail($to, $subject, $message, $headers);
+
 } else {
     echo "Error: " . $stmt->error;
 } 

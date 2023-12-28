@@ -60,8 +60,7 @@ window.onload = function() {
 
     if (!esDispositivoMovil()) {
         // Ocultar el contenido principal
-        contenidoPrincipal.style.display = "none";
-        console.log('sdfsdfsdf');
+        contenidoPrincipal.style.display = "none";        
         // Mostrar y generar el código QR
         var qrcode = new QRCode(qrcodeContainer, {
             text: window.location.href,
